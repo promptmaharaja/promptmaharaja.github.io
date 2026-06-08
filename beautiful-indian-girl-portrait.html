@@ -29,8 +29,25 @@ color:#FFD700;
 border:1px solid #FFD700;
 padding:10px;
 }
+button{
+background:#FFD700;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+margin-top:15px;
+}
 </style>
 </head><body><h1>👑 Beautiful Indian Girl Portrait</h1><div class="box"><textarea readonly>
 Beautiful young Indian woman, elegant traditional attire, detailed facial features, expressive eyes, soft cinematic lighting, ultra realistic skin texture, high detail photography, professional portrait, shallow depth of field, luxury fashion style, golden hour lighting, masterpiece, 8k, highly detailed.
-</textarea></div><p><a href="ai-girls.html">⬅ Back To AI Girls</a></p></body>
+</textarea><br><br>
+
+<button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+</div><p><a href="ai-girls.html">⬅ Back To AI Girls</a></p><script>
+function copyPrompt() {
+const promptText = document.querySelector("textarea").value;
+navigator.clipboard.writeText(promptText);
+alert("Prompt Copied!");
+}
+</script></body>
 </html>

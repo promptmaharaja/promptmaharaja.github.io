@@ -1,1 +1,70 @@
-premium-coffee-brand-ad.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Premium Coffee Brand Ad</title>
+<style>
+body{
+background:#000;
+color:#FFD700;
+font-family:Arial,sans-serif;
+text-align:center;
+padding:20px;
+}
+.box{
+background:#111;
+border:1px solid #FFD700;
+border-radius:15px;
+padding:20px;
+margin:20px auto;
+max-width:700px;
+}
+a{
+color:#FFD700;
+text-decoration:none;
+}
+textarea{
+width:90%;
+height:250px;
+background:#000;
+color:#FFD700;
+border:1px solid #FFD700;
+padding:10px;
+}
+button{
+background:#FFD700;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>☕ Premium Coffee Brand Ad</h1>
+
+<div class="box">
+
+<textarea readonly>
+Premium coffee brand advertisement, luxury coffee cup with rich steam, roasted coffee beans, cinematic morning lighting, warm golden atmosphere, ultra realistic product photography, elegant café setting, premium branding, high-end commercial composition, masterpiece quality, 8k resolution.
+</textarea>
+
+<br><br>
+
+<button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+</div>
+
+<p><a href="product-ads.html">⬅ Back To Product Ads</a></p>
+
+<script>
+function copyPrompt() {
+const promptText = document.querySelector("textarea").value;
+navigator.clipboard.writeText(promptText);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

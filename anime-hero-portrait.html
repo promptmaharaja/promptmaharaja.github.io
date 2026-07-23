@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Anime Hero Portrait</title>
+
 <style>
 body{
 background:#000;
@@ -36,8 +37,10 @@ border:none;
 padding:10px 20px;
 cursor:pointer;
 margin-top:15px;
+font-weight:bold;
 }
 </style>
+
 </head>
 
 <body>
@@ -45,26 +48,36 @@ margin-top:15px;
 <h1>🗾 Anime Hero Portrait</h1>
 
 <div class="box">
-
-<textarea readonly>
-Epic anime hero portrait, handsome young protagonist, sharp expressive eyes, detailed spiky hair, cinematic anime lighting, dramatic background, vibrant colors, ultra detailed illustration, premium manga style, masterpiece anime artwork, high quality, 8k resolution.
-</textarea>
-
+<h2>Prompt 1</h2>
+<textarea readonly>Epic anime hero portrait, handsome young protagonist, sharp expressive eyes, detailed spiky hair, cinematic anime lighting, dramatic background, vibrant colors, masterpiece anime artwork, ultra detailed, 8K.</textarea>
 <br><br>
-
-<button onclick="copyPrompt()">📋 Copy Prompt</button>
-
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
 
-<p><a href="anime.html">⬅ Back To Anime</a></p>
+<div class="box">
+<h2>Prompt 2</h2>
+<textarea readonly>Legendary anime swordsman, glowing katana, flowing cape, intense blue aura, dramatic storm background, ultra detailed manga illustration, premium cinematic anime style, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-<script>
-function copyPrompt() {
-const promptText = document.querySelector("textarea").value;
-navigator.clipboard.writeText(promptText);
-alert("Prompt Copied!");
-}
-</script>
+<div class="box">
+<h2>Prompt 3</h2>
+<textarea readonly>Young anime warrior standing on mountain peak at sunrise, powerful expression, detailed armor, fantasy landscape, golden light, highly detailed anime art, premium illustration, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-</body>
-</html>
+<div class="box">
+<h2>Prompt 4</h2>
+<textarea readonly>Dark anime hero with black cloak, glowing red eyes, mysterious atmosphere, cinematic shadows, premium manga artwork, dramatic lighting, ultra detailed, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 5</h2>
+<textarea readonly>Modern anime hero wearing stylish streetwear, confident pose, neon cyberpunk city background, cinematic lighting, vibrant colors, ultra detailed anime illustration, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>

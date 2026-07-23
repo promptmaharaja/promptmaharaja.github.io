@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Action Movie Poster</title>
+
 <style>
 body{
 background:#000;
@@ -36,8 +37,10 @@ border:none;
 padding:10px 20px;
 cursor:pointer;
 margin-top:15px;
+font-weight:bold;
 }
 </style>
+
 </head>
 
 <body>
@@ -45,26 +48,36 @@ margin-top:15px;
 <h1>💥 Action Movie Poster</h1>
 
 <div class="box">
-
-<textarea readonly>
-Explosive action movie poster, fearless hero, dramatic cinematic lighting, intense battle scene, city destruction background, blockbuster Hollywood atmosphere, dynamic composition, ultra realistic details, powerful visual storytelling, high impact movie artwork, masterpiece quality, 8k resolution.
-</textarea>
-
+<h2>Prompt 1</h2>
+<textarea readonly>Explosive action movie poster featuring a fearless hero walking through blazing flames, destroyed city skyline, cinematic smoke, dramatic orange lighting, blockbuster Hollywood style, ultra realistic, masterpiece, 8K.</textarea>
 <br><br>
-
-<button onclick="copyPrompt()">📋 Copy Prompt</button>
-
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
 
-<p><a href="posters.html">⬅ Back To Posters</a></p>
+<div class="box">
+<h2>Prompt 2</h2>
+<textarea readonly>Elite special forces soldier holding an assault rifle, battlefield filled with explosions, helicopters overhead, cinematic action composition, hyper realistic details, premium movie poster, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-<script>
-function copyPrompt() {
-const promptText = document.querySelector("textarea").value;
-navigator.clipboard.writeText(promptText);
-alert("Prompt Copied!");
-}
-</script>
+<div class="box">
+<h2>Prompt 3</h2>
+<textarea readonly>Powerful vigilante hero standing in heavy rain, glowing city lights, torn black coat, intense expression, dramatic cinematic lighting, ultra realistic action movie poster, blockbuster style, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-</body>
-</html>
+<div class="box">
+<h2>Prompt 4</h2>
+<textarea readonly>Motorcycle action hero racing through a burning highway, sparks flying, massive explosions behind, high speed cinematic motion, Hollywood blockbuster poster, ultra detailed realism, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 5</h2>
+<textarea readonly>Legendary action hero holding two pistols, shattered glass flying everywhere, abandoned warehouse, cinematic blue and orange lighting, premium Hollywood action movie poster, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+  </div>

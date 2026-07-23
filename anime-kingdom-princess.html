@@ -183,3 +183,50 @@ font-weight:bold;
 <br><br>
 <button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
+<div class="box">
+<h2>Prompt 21</h2>
+<textarea readonly>Ultimate anime kingdom princess, wearing a magnificent golden royal gown, diamond crown, grand fantasy castle, magical glowing aura, cinematic royal atmosphere, ultra detailed anime masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 22</h2>
+<textarea readonly>Anime princess of a hidden magical kingdom, crystal palace, enchanted forest surroundings, elegant fantasy dress, glowing butterflies, dreamy cinematic lighting, premium anime artwork, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 23</h2>
+<textarea readonly>Anime royal princess standing before a legendary castle gate, majestic crown, flowing gown, magical golden particles, epic fantasy kingdom scene, ultra detailed illustration, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 24</h2>
+<textarea readonly>Anime queen princess with powerful magical abilities, glowing staff, royal armor dress, fantasy kingdom battlefield, dramatic sky, cinematic anime illustration, ultra detailed, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 25</h2>
+<textarea readonly>Legendary anime kingdom princess heroine, majestic golden crown, royal palace, magical light rays, fantasy world, elegant beauty, cinematic composition, ultra detailed anime masterpiece, best quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<p><a href="anime.html">⬅ Back To Anime</a></p>
+
+<script>
+function copyPrompt(button){
+const prompt = button.parentElement.querySelector("textarea").value;
+navigator.clipboard.writeText(prompt);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

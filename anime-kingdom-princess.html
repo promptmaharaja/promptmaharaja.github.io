@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Anime Kingdom Princess</title>
+
 <style>
 body{
 background:#000;
@@ -12,7 +13,7 @@ padding:20px;
 }
 .box{
 background:#111;
-border:1px solid #FFD700;
+border:1px solid:#FFD700;
 border-radius:15px;
 padding:20px;
 margin:20px auto;
@@ -27,7 +28,7 @@ width:90%;
 height:250px;
 background:#000;
 color:#FFD700;
-border:1px solid #FFD700;
+border:1px solid:#FFD700;
 padding:10px;
 }
 button{
@@ -36,8 +37,10 @@ border:none;
 padding:10px 20px;
 cursor:pointer;
 margin-top:15px;
+font-weight:bold;
 }
 </style>
+
 </head>
 
 <body>
@@ -45,26 +48,36 @@ margin-top:15px;
 <h1>👑 Anime Kingdom Princess</h1>
 
 <div class="box">
-
-<textarea readonly>
-Beautiful anime kingdom princess, elegant royal gown, sparkling crown, majestic fantasy castle, glowing magical aura, cinematic sunset lighting, flowing long hair, vibrant anime colors, ultra detailed illustration, enchanting fairy tale atmosphere, masterpiece quality, 8k resolution.
-</textarea>
-
+<h2>Prompt 1</h2>
+<textarea readonly>Beautiful anime kingdom princess wearing an elegant royal gown, sparkling golden crown, majestic fantasy castle background, glowing magical aura, cinematic sunset lighting, ultra detailed anime illustration, masterpiece quality, 8K.</textarea>
 <br><br>
-
-<button onclick="copyPrompt()">📋 Copy Prompt</button>
-
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
 
-<p><a href="anime.html">⬅ Back To Anime</a></p>
+<div class="box">
+<h2>Prompt 2</h2>
+<textarea readonly>Royal anime princess standing in a grand palace hall, luxurious dress, crystal chandelier, flowing long hair, magical atmosphere, cinematic fantasy lighting, premium anime artwork, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-<script>
-function copyPrompt() {
-const promptText = document.querySelector("textarea").value;
-navigator.clipboard.writeText(promptText);
-alert("Prompt Copied!");
-}
-</script>
+<div class="box">
+<h2>Prompt 3</h2>
+<textarea readonly>Anime princess in an enchanted forest, beautiful royal gown, flower crown, glowing butterflies around her, fairy tale kingdom atmosphere, vibrant colors, ultra detailed anime illustration, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-</body>
-</html>
+<div class="box">
+<h2>Prompt 4</h2>
+<textarea readonly>Elegant anime princess sitting on a golden throne, majestic castle interior, royal jewelry, soft cinematic lighting, fantasy kingdom setting, premium anime portrait, ultra detailed, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 5</h2>
+<textarea readonly>Anime warrior princess holding a magical sword, royal armor combined with beautiful gown, ancient kingdom battlefield, glowing energy effects, cinematic fantasy artwork, ultra detailed masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>

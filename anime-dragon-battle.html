@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Anime Dragon Battle</title>
+
 <style>
 body{
 background:#000;
@@ -36,8 +37,10 @@ border:none;
 padding:10px 20px;
 cursor:pointer;
 margin-top:15px;
+font-weight:bold;
 }
 </style>
+
 </head>
 
 <body>
@@ -45,26 +48,36 @@ margin-top:15px;
 <h1>🐉 Anime Dragon Battle</h1>
 
 <div class="box">
-
-<textarea readonly>
-Epic anime dragon battle, fearless anime warrior fighting a gigantic fire dragon, blazing flames, magical energy effects, cinematic fantasy battlefield, dramatic sky, ultra detailed anime illustration, dynamic action scene, vibrant colors, masterpiece quality, 8k resolution.
-</textarea>
-
+<h2>Prompt 1</h2>
+<textarea readonly>Epic anime warrior battling a colossal fire dragon, blazing inferno, molten lava battlefield, cinematic fantasy lighting, magical energy effects, ultra detailed anime illustration, masterpiece quality, 8K.</textarea>
 <br><br>
-
-<button onclick="copyPrompt()">📋 Copy Prompt</button>
-
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
 
-<p><a href="anime.html">⬅ Back To Anime</a></p>
+<div class="box">
+<h2>Prompt 2</h2>
+<textarea readonly>Legendary swordsman confronting an ancient ice dragon, frozen mountains, crystal snowstorm, glowing blue katana, dramatic anime action scene, premium manga artwork, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-<script>
-function copyPrompt() {
-const promptText = document.querySelector("textarea").value;
-navigator.clipboard.writeText(promptText);
-alert("Prompt Copied!");
-}
-</script>
+<div class="box">
+<h2>Prompt 3</h2>
+<textarea readonly>Young anime hero riding a massive golden dragon through the clouds, sunlight, magical sky kingdom, cinematic fantasy composition, vibrant colors, ultra detailed, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-</body>
-</html>
+<div class="box">
+<h2>Prompt 4</h2>
+<textarea readonly>Dark anime knight facing a terrifying black dragon with glowing red eyes, ruined castle, thunderstorm, dramatic lighting, premium anime fantasy illustration, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 5</h2>
+<textarea readonly>Epic dragon battle above a futuristic city, cyber dragon breathing blue plasma, anime warrior with energy sword, cinematic sci-fi fantasy, ultra detailed anime artwork, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>

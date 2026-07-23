@@ -183,3 +183,50 @@ font-weight:bold;
 <br><br>
 <button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
+<div class="box">
+<h2>Prompt 21</h2>
+<textarea readonly>Anime shadow hero emerging from darkness, glowing purple eyes, black cloak, mysterious aura, ruined city background, cinematic lighting, ultra detailed manga illustration, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 22</h2>
+<textarea readonly>Anime ocean hero controlling giant waves, sapphire blue armor, glowing trident, stormy sea, cinematic fantasy atmosphere, premium anime artwork, ultra detailed, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 23</h2>
+<textarea readonly>Anime vampire hero with crimson eyes, elegant black royal outfit, gothic castle, full moon, dramatic cinematic lighting, ultra detailed anime illustration, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 24</h2>
+<textarea readonly>Anime phoenix hero surrounded by blazing golden flames, majestic wings, fearless expression, volcanic landscape, cinematic action composition, ultra detailed anime masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 25</h2>
+<textarea readonly>Ultimate legendary anime hero, glowing divine sword, celestial armor, powerful golden aura, dramatic sky filled with light rays, epic fantasy world, cinematic composition, masterpiece anime artwork, ultra detailed, best quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<p><a href="anime.html">⬅ Back To Anime</a></p>
+
+<script>
+function copyPrompt(button){
+const prompt = button.parentElement.querySelector("textarea").value;
+navigator.clipboard.writeText(prompt);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

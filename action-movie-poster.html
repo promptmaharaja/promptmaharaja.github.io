@@ -183,3 +183,50 @@ font-weight:bold;
 <br><br>
 <button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
+<div class="box">
+<h2>Prompt 21</h2>
+<textarea readonly>Elite black-ops operative walking through a burning airport runway, fighter jets taking off, dramatic smoke, cinematic lighting, ultra realistic Hollywood action movie poster, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 22</h2>
+<textarea readonly>Fearless bounty hunter holding dual revolvers, abandoned western town exploding behind, dramatic sunset, dust storm, blockbuster action movie poster, ultra detailed realism, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 23</h2>
+<textarea readonly>Masked anti-hero standing before a burning prison, shattered chains, intense facial expression, cinematic blue and orange lighting, premium Hollywood action poster, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 24</h2>
+<textarea readonly>Epic final showdown between a fearless hero and a ruthless villain, collapsing skyscrapers, lightning-filled sky, fire and debris everywhere, cinematic blockbuster action movie poster, ultra realistic, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 25</h2>
+<textarea readonly>Ultimate Hollywood action movie poster, legendary hero standing at the center of a war-torn city, blazing explosions, helicopters, fighter jets, dramatic cinematic lighting, hyper realistic, masterpiece, best quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<p><a href="posters.html">⬅ Back To Posters</a></p>
+
+<script>
+function copyPrompt(button){
+const prompt = button.parentElement.querySelector("textarea").value;
+navigator.clipboard.writeText(prompt);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

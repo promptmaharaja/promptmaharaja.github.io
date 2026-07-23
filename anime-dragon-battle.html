@@ -183,3 +183,50 @@ font-weight:bold;
 <br><br>
 <button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
+<div class="box">
+<h2>Prompt 21</h2>
+<textarea readonly>Legendary anime hero battling a colossal cosmic dragon among galaxies, glowing celestial armor, meteor shower, divine energy clash, cinematic fantasy anime illustration, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 22</h2>
+<textarea readonly>Fearless anime warrior confronting a poisonous swamp dragon, toxic green mist, enchanted marshland, glowing enchanted blade, dramatic cinematic lighting, ultra detailed anime artwork, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 23</h2>
+<textarea readonly>Epic anime dragon battle inside a volcanic crater, ancient magma dragon breathing fire, fearless swordsman, molten lava explosions, cinematic fantasy composition, masterpiece anime art, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 24</h2>
+<textarea readonly>Anime guardian defending a sacred crystal from a gigantic dark dragon, magical barrier, glowing blue energy, ruined temple, ultra detailed fantasy anime illustration, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 25</h2>
+<textarea readonly>Ultimate anime dragon battle, legendary hero wielding a divine dragon-slaying sword against the king of dragons, apocalyptic sky, lightning, fire, magical energy, cinematic fantasy masterpiece, ultra detailed, best quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<p><a href="anime.html">⬅ Back To Anime</a></p>
+
+<script>
+function copyPrompt(button){
+const prompt = button.parentElement.querySelector("textarea").value;
+navigator.clipboard.writeText(prompt);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

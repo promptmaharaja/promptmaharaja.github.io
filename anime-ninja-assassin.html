@@ -183,3 +183,50 @@ font-weight:bold;
 <br><br>
 <button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
+<div class="box">
+<h2>Prompt 21</h2>
+<textarea readonly>Ultimate anime ninja assassin, legendary shadow warrior with glowing black katana, ancient Japanese castle, dark stormy sky, powerful aura, cinematic fantasy atmosphere, ultra detailed masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 22</h2>
+<textarea readonly>Anime ninja assassin walking through a burning village, black tactical outfit, dual swords, flames and smoke everywhere, dramatic action scene, premium anime illustration, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 23</h2>
+<textarea readonly>Anime female shadow assassin with elegant black armor, glowing red blade, moonlit forest, mysterious beauty, cinematic lighting, ultra detailed fantasy anime artwork, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 24</h2>
+<textarea readonly>Epic anime ninja battle scene, legendary assassin fighting against a powerful enemy, flying weapons, smoke effects, ancient battlefield, cinematic action composition, ultra detailed, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 25</h2>
+<textarea readonly>Ultimate anime ninja assassin hero, mysterious masked warrior, glowing legendary katana, night city and ancient Japan fusion, dramatic cinematic lighting, masterpiece anime artwork, best quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<p><a href="anime.html">⬅ Back To Anime</a></p>
+
+<script>
+function copyPrompt(button){
+const prompt = button.parentElement.querySelector("textarea").value;
+navigator.clipboard.writeText(prompt);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

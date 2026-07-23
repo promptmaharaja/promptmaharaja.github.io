@@ -183,3 +183,50 @@ font-weight:bold;
 <br><br>
 <button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
+<div class="box">
+<h2>Prompt 21</h2>
+<textarea readonly>Ultimate Indian beauty portrait, elegant royal saree, diamond jewelry, glowing face, luxurious palace setting, cinematic golden lighting, realistic high fashion photography, ultra detailed masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 22</h2>
+<textarea readonly>Beautiful Indian woman in traditional bridal style, red lehenga, detailed gold ornaments, soft romantic lighting, wedding celebration background, professional luxury photography, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 23</h2>
+<textarea readonly>Indian fashion model portrait, designer ethnic outfit, confident expression, modern luxury style, studio lighting, realistic skin texture, premium magazine photography, ultra detailed, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 24</h2>
+<textarea readonly>Beautiful Indian girl portrait in a royal garden, elegant traditional dress, flowing hair, natural beauty, cinematic sunlight, dreamy atmosphere, realistic photography, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 25</h2>
+<textarea readonly>Legendary Indian beauty portrait, stunning woman wearing luxurious traditional attire, royal jewelry, cinematic lighting, premium fashion photography, realistic details, masterpiece quality, best quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<p><a href="ai-girls.html">⬅ Back To AI Girls</a></p>
+
+<script>
+function copyPrompt(button){
+const prompt = button.parentElement.querySelector("textarea").value;
+navigator.clipboard.writeText(prompt);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

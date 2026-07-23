@@ -1,1 +1,70 @@
-anime-ninja-assassin.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anime Ninja Assassin</title>
+<style>
+body{
+background:#000;
+color:#FFD700;
+font-family:Arial,sans-serif;
+text-align:center;
+padding:20px;
+}
+.box{
+background:#111;
+border:1px solid #FFD700;
+border-radius:15px;
+padding:20px;
+margin:20px auto;
+max-width:700px;
+}
+a{
+color:#FFD700;
+text-decoration:none;
+}
+textarea{
+width:90%;
+height:250px;
+background:#000;
+color:#FFD700;
+border:1px solid #FFD700;
+padding:10px;
+}
+button{
+background:#FFD700;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🥷 Anime Ninja Assassin</h1>
+
+<div class="box">
+
+<textarea readonly>
+Epic anime ninja assassin, stealth warrior in black outfit, glowing katana, moonlit Japanese rooftop, dramatic cinematic lighting, flying cherry blossom petals, intense action pose, ultra detailed anime illustration, mysterious atmosphere, masterpiece quality, 8k resolution.
+</textarea>
+
+<br><br>
+
+<button onclick="copyPrompt()">📋 Copy Prompt</button>
+
+</div>
+
+<p><a href="anime.html">⬅ Back To Anime</a></p>
+
+<script>
+function copyPrompt() {
+const promptText = document.querySelector("textarea").value;
+navigator.clipboard.writeText(promptText);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

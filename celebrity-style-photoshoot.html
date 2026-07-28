@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Celebrity Style Photoshoot</title>
+
 <style>
 body{
 background:#000;
@@ -36,8 +37,10 @@ border:none;
 padding:10px 20px;
 cursor:pointer;
 margin-top:15px;
+font-weight:bold;
 }
 </style>
+
 </head>
 
 <body>
@@ -45,26 +48,36 @@ margin-top:15px;
 <h1>📸 Celebrity Style Photoshoot</h1>
 
 <div class="box">
-
-<textarea readonly>
-Celebrity style fashion photoshoot, glamorous appearance, luxury designer outfit, confident pose, professional studio lighting, magazine cover quality, ultra realistic photography, flawless skin texture, cinematic atmosphere, premium fashion aesthetic, masterpiece quality, highly detailed, 8k resolution.
-</textarea>
-
+<h2>Prompt 1</h2>
+<textarea readonly>Celebrity style fashion photoshoot, luxury designer outfit, confident pose, professional studio lighting, magazine cover quality, ultra realistic photography, flawless skin texture, cinematic atmosphere, premium fashion aesthetic, masterpiece, 8K.</textarea>
 <br><br>
-
-<button onclick="copyPrompt()">📋 Copy Prompt</button>
-
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
 
-<p><a href="ai-girls.html">⬅ Back To AI Girls</a></p>
+<div class="box">
+<h2>Prompt 2</h2>
+<textarea readonly>International celebrity inspired photoshoot, elegant black evening gown, luxury studio setup, dramatic lighting, glamorous makeup, premium editorial fashion photography, ultra realistic, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-<script>
-function copyPrompt() {
-const promptText = document.querySelector("textarea").value;
-navigator.clipboard.writeText(promptText);
-alert("Prompt Copied!");
-}
-</script>
+<div class="box">
+<h2>Prompt 3</h2>
+<textarea readonly>Luxury celebrity portrait in a modern penthouse, stylish designer outfit, confident expression, cinematic golden lighting, fashion magazine cover, ultra detailed realistic photography, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
 
-</body>
-</html>
+<div class="box">
+<h2>Prompt 4</h2>
+<textarea readonly>High-end celebrity street fashion photoshoot, luxury sunglasses, trendy designer clothing, urban city background, cinematic photography, realistic skin details, premium editorial style, masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 5</h2>
+<textarea readonly>Elegant celebrity red carpet photoshoot, sparkling luxury gown, diamond jewelry, glamorous pose, flash photography, cinematic lighting, premium fashion magazine cover, ultra realistic, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>

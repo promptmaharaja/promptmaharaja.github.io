@@ -183,3 +183,50 @@ font-weight:bold;
 <br><br>
 <button onclick="copyPrompt(this)">📋 Copy Prompt</button>
 </div>
+<div class="box">
+<h2>Prompt 21</h2>
+<textarea readonly>Celebrity-inspired luxury mansion photoshoot, designer couture outfit, elegant staircase, cinematic golden lighting, flawless makeup, premium editorial fashion photography, ultra realistic, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 22</h2>
+<textarea readonly>International celebrity-inspired luxury hotel suite photoshoot, stylish fashion outfit, floor-to-ceiling windows, glamorous atmosphere, cinematic lighting, ultra detailed magazine cover photography, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 23</h2>
+<textarea readonly>Celebrity-inspired vintage Hollywood photoshoot, elegant classic outfit, luxury vintage car, dramatic studio lighting, timeless glamour, premium editorial portrait, ultra realistic masterpiece, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 24</h2>
+<textarea readonly>Celebrity-inspired luxury garden photoshoot, designer floral gown, blooming flowers, soft golden hour sunlight, cinematic composition, high-end fashion photography, masterpiece quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<div class="box">
+<h2>Prompt 25</h2>
+<textarea readonly>Ultimate celebrity-inspired fashion photoshoot, iconic luxury styling, premium designer outfit, cinematic editorial lighting, glamorous expression, ultra realistic photography, magazine cover masterpiece, best quality, 8K.</textarea>
+<br><br>
+<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+</div>
+
+<p><a href="ai-girls.html">⬅ Back To AI Girls</a></p>
+
+<script>
+function copyPrompt(button){
+const prompt = button.parentElement.querySelector("textarea").value;
+navigator.clipboard.writeText(prompt);
+alert("Prompt Copied!");
+}
+</script>
+
+</body>
+</html>

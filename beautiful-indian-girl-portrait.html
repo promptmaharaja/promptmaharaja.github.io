@@ -1,232 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Beautiful Indian Girl Portrait</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beautiful Indian Girl Portrait - 25 Premium Prompts | PromptMaharaja</title>
 <style>
-body{
-background:#000;
-color:#FFD700;
-font-family:Arial,sans-serif;
-text-align:center;
-padding:20px;
-}
-.box{
-background:#111;
-border:1px solid:#FFD700;
-border-radius:15px;
-padding:20px;
-margin:20px auto;
-max-width:700px;
-}
-a{
-color:#FFD700;
-text-decoration:none;
-}
-textarea{
-width:90%;
-height:250px;
-background:#000;
-color:#FFD700;
-border:1px solid:#FFD700;
-padding:10px;
-}
-button{
-background:#FFD700;
-border:none;
-padding:10px 20px;
-cursor:pointer;
-margin-top:15px;
-font-weight:bold;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{background:#070708;color:#fff;min-height:100vh}
+.header{background:#111113;border-bottom:1px solid rgba(255,215,0,0.15);padding:14px 16px;position:sticky;top:0;z-index:50;backdrop-filter:blur(20px)}
+.header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#000;font-size:14px}
+.logo-text{color:#FFD700;font-weight:800;letter-spacing:0.02em}
+.badge-live{background:#22c55e;color:#000;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:800;letter-spacing:0.05em}
+.hero{max-width:1280px;margin:0 auto;padding:24px 16px 8px}
+.hero h1{font-size:26px;font-weight:900;letter-spacing:-0.02em;line-height:1.1}
+.hero h1 span{color:#FFD700}
+.hero p{color:rgba(255,255,255,0.45);font-size:13px;margin-top:8px}
+.search-box{margin-top:18px;background:#121214;border:1px solid rgba(255,215,0,0.12);border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.search-box input{background:transparent;border:none;outline:none;color:#fff;width:100%;font-size:14px}
+.grid{max-width:1280px;margin:0 auto;padding:16px;display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:#121214;border:1px solid rgba(255,255,255,0.06);border-radius:20px;overflow:hidden;transition:all 0.3s}
+.card:hover{border-color:rgba(255,215,0,0.25);transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,0.4),0 0 20px rgba(255,215,0,0.08)}
+.img-wrap{height:220px;position:relative;overflow:hidden}
+.badge-num{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);border:1px solid rgba(255,215,0,0.2);color:#FFD700;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:800}
+.badge-type{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;padding:5px 10px;border-radius:20px;font-size:10px;font-weight:900}
+.card-body{padding:14px}
+.card-title{font-size:14px;font-weight:700;line-height:1.3}
+.prompt-box{margin-top:10px;background:#0a0a0b;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:10px;font-size:12px;color:rgba(255,255,255,0.7);line-height:1.5;height:110px;overflow:auto}
+.actions{margin-top:12px;display:flex;gap:8px}
+.btn-copy{flex:1;background:#FFD700;color:#000;border:none;border-radius:10px;padding:10px;font-weight:800;font-size:13px;cursor:pointer}
+.btn-neg{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:10px 12px;font-size:12px;cursor:pointer}
+.footer{max-width:1280px;margin:20px auto;padding:0 16px 30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.back{background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);color:#fff;padding:10px 16px;border-radius:30px;text-decoration:none;font-size:13px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(100px);background:#FFD700;color:#000;padding:12px 18px;border-radius:30px;font-weight:800;font-size:13px;transition:all 0.3s;z-index:100;opacity:0}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 </style>
-
 </head>
-
 <body>
-
-<h1>👑 Beautiful Indian Girl Portrait</h1>
-
-<div class="box">
-<h2>Prompt 1</h2>
-<textarea readonly>Beautiful young Indian woman wearing an elegant traditional saree, expressive eyes, natural beauty, soft cinematic lighting, realistic skin texture, professional portrait photography, golden hour glow, luxury fashion style, ultra detailed, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="header"><div class="header-inner"><a class="logo" href="ai-girls.html"><div class="logo-icon">PM</div><div class="logo-text">PromptMaharaja</div></a><div class="badge-live">25 PROMPTS • LIVE</div></div></div>
+<div class="hero">
+<h1>👑 <span>Beautiful Indian Girl Portrait</span> - Premium Prompts</h1>
+<p>Image-First Gallery • 25 luxury Indian beauty prompts • Click copy to use</p>
+<div class="search-box"><span style="color:#FFD700">🔍</span><input id="search" placeholder="Search saree, bridal, lehenga, traditional..." oninput="filterCards(this.value)"></div>
 </div>
+<div class="grid" id="grid">
 
-<div class="box">
-<h2>Prompt 2</h2>
-<textarea readonly>Stunning Indian girl portrait with long flowing hair, graceful traditional outfit, beautiful facial features, soft studio lighting, realistic photography style, premium fashion portrait, shallow depth of field, masterpiece quality, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="beautiful young indian woman wearing an elegant traditional saree, expressive eyes, natural beauty, soft cinematic lighting, realistic skin texture, professional portrait photography, golden hour glow, luxury fashion style, ultra detailed, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#FF6B6B 0%,#FFD700 100%)"></div><div class="badge-num">#01</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #1</div><div class="prompt-box">Beautiful young Indian woman wearing an elegant traditional saree, expressive eyes, natural beauty, soft cinematic lighting, realistic skin texture, professional portrait photography, golden hour glow, luxury fashion style, ultra detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 3</h2>
-<textarea readonly>Elegant Indian woman in royal bridal attire, detailed jewelry, expressive eyes, glowing face, cinematic portrait lighting, luxurious wedding atmosphere, ultra realistic photography, high detail, masterpiece, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="stunning indian girl portrait with long flowing hair, graceful traditional outfit, beautiful facial features, soft studio lighting, realistic photography style, premium fashion portrait, shallow depth of field, masterpiece quality, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#8E2DE2 0%,#4A00E0 50%,#FFD700 100%)"></div><div class="badge-num">#02</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #2</div><div class="prompt-box">Stunning Indian girl portrait with long flowing hair, graceful traditional outfit, beautiful facial features, soft studio lighting, realistic photography style, premium fashion portrait, shallow depth of field, masterpiece quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 4</h2>
-<textarea readonly>Beautiful Indian girl wearing pastel ethnic dress, natural smile, soft sunlight, realistic skin texture, dreamy background blur, professional portrait photography, elegant and graceful look, ultra detailed, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="elegant indian woman in royal bridal attire, detailed jewelry, expressive eyes, glowing face, cinematic portrait lighting, luxurious wedding atmosphere, ultra realistic photography, high detail, masterpiece, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#FF512F 0%,#DD2476 100%)"></div><div class="badge-num">#03</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #3</div><div class="prompt-box">Elegant Indian woman in royal bridal attire, detailed jewelry, expressive eyes, glowing face, cinematic portrait lighting, luxurious wedding atmosphere, ultra realistic photography, high detail, masterpiece, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 5</h2>
-<textarea readonly>Indian beauty portrait with traditional earrings, expressive eyes, silky hair, luxury fashion styling, cinematic lighting, realistic photography, premium magazine cover style, highly detailed, masterpiece, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
-</div>
-<div class="box">
-<h2>Prompt 6</h2>
-<textarea readonly>Beautiful Indian woman in a royal lehenga, intricate embroidery, elegant jewelry, confident expression, palace background, cinematic golden lighting, luxury fashion portrait, ultra realistic photography, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="beautiful indian girl wearing pastel ethnic dress, natural smile, soft sunlight, realistic skin texture, dreamy background blur, professional portrait photography, elegant and graceful look, ultra detailed, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#11998e 0%,#38ef7d 100%)"></div><div class="badge-num">#04</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #4</div><div class="prompt-box">Beautiful Indian girl wearing pastel ethnic dress, natural smile, soft sunlight, realistic skin texture, dreamy background blur, professional portrait photography, elegant and graceful look, ultra detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 7</h2>
-<textarea readonly>Charming Indian girl portrait wearing a traditional salwar suit, soft natural makeup, beautiful eyes, peaceful expression, outdoor garden background, realistic DSLR photography, premium portrait style, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="indian beauty portrait with traditional earrings, expressive eyes, silky hair, luxury fashion styling, cinematic lighting, realistic photography, premium magazine cover style, highly detailed, masterpiece, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#f857a6 0%,#ff5858 50%,#FFD700 100%)"></div><div class="badge-num">#05</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #5</div><div class="prompt-box">Indian beauty portrait with traditional earrings, expressive eyes, silky hair, luxury fashion styling, cinematic lighting, realistic photography, premium magazine cover style, highly detailed, masterpiece, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 8</h2>
-<textarea readonly>Indian fashion model wearing designer saree, elegant pose, detailed facial features, luxury studio setup, dramatic soft lighting, realistic skin details, high-end magazine photography, masterpiece quality, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="beautiful indian woman in a royal lehenga, intricate embroidery, elegant jewelry, confident expression, palace background, cinematic golden lighting, luxury fashion portrait, ultra realistic photography, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#8B4513 0%,#FFD700 100%)"></div><div class="badge-num">#06</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #6</div><div class="prompt-box">Beautiful Indian woman in a royal lehenga, intricate embroidery, elegant jewelry, confident expression, palace background, cinematic golden lighting, luxury fashion portrait, ultra realistic photography, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 9</h2>
-<textarea readonly>Beautiful Indian girl with jasmine flowers in her hair, traditional outfit, warm smile, village heritage background, cinematic sunlight, realistic portrait photography, ultra detailed, premium quality, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="charming indian girl portrait wearing a traditional salwar suit, soft natural makeup, beautiful eyes, peaceful expression, outdoor garden background, realistic dslr photography, premium portrait style, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#56ab2f 0%,#a8e063 100%)"></div><div class="badge-num">#07</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #7</div><div class="prompt-box">Charming Indian girl portrait wearing a traditional salwar suit, soft natural makeup, beautiful eyes, peaceful expression, outdoor garden background, realistic DSLR photography, premium portrait style, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 10</h2>
-<textarea readonly>Elegant Indian princess style portrait, luxurious royal dress, diamond jewelry, majestic palace background, glowing skin, cinematic lighting, realistic fashion photography, masterpiece, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
-</div>
-<div class="box">
-<h2>Prompt 11</h2>
-<textarea readonly>Beautiful Indian woman portrait wearing a luxurious blue saree, elegant jewelry, expressive eyes, soft cinematic lighting, royal fashion style, realistic DSLR photography, ultra detailed skin texture, masterpiece, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="indian fashion model wearing designer saree, elegant pose, detailed facial features, luxury studio setup, dramatic soft lighting, realistic skin details, high-end magazine photography, masterpiece quality, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#000000 0%,#434343 100%)"></div><div class="badge-num">#08</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #8</div><div class="prompt-box">Indian fashion model wearing designer saree, elegant pose, detailed facial features, luxury studio setup, dramatic soft lighting, realistic skin details, high-end magazine photography, masterpiece quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 12</h2>
-<textarea readonly>Young Indian girl with graceful traditional look, embroidered ethnic outfit, natural beauty, flowing hair, warm sunlight, dreamy background, professional portrait photography, realistic details, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="beautiful indian girl with jasmine flowers in her hair, traditional outfit, warm smile, village heritage background, cinematic sunlight, realistic portrait photography, ultra detailed, premium quality, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#ff9a9e 0%,#fecfef 100%)"></div><div class="badge-num">#09</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #9</div><div class="prompt-box">Beautiful Indian girl with jasmine flowers in her hair, traditional outfit, warm smile, village heritage background, cinematic sunlight, realistic portrait photography, ultra detailed, premium quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 13</h2>
-<textarea readonly>Indian bridal portrait, beautiful bride wearing red wedding lehenga, detailed gold jewelry, elegant makeup, emotional expression, luxury wedding photography style, cinematic lighting, ultra realistic, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="elegant indian princess style portrait, luxurious royal dress, diamond jewelry, majestic palace background, glowing skin, cinematic lighting, realistic fashion photography, masterpiece, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#4B0082 0%,#FFD700 100%)"></div><div class="badge-num">#10</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #10</div><div class="prompt-box">Elegant Indian princess style portrait, luxurious royal dress, diamond jewelry, majestic palace background, glowing skin, cinematic lighting, realistic fashion photography, masterpiece, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 14</h2>
-<textarea readonly>Modern Indian fashion girl portrait, stylish outfit, confident pose, urban background, cinematic street photography, realistic facial details, luxury fashion magazine style, masterpiece quality, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="beautiful indian woman portrait wearing a luxurious blue saree, elegant jewelry, expressive eyes, soft cinematic lighting, royal fashion style, realistic dslr photography, ultra detailed skin texture, masterpiece, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#00416A 0%,#E4E5E6 100%)"></div><div class="badge-num">#11</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #11</div><div class="prompt-box">Beautiful Indian woman portrait wearing a luxurious blue saree, elegant jewelry, expressive eyes, soft cinematic lighting, royal fashion style, realistic DSLR photography, ultra detailed skin texture, masterpiece, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 15</h2>
-<textarea readonly>Elegant Indian woman sitting beside a traditional window, beautiful saree, soft natural light, peaceful expression, artistic portrait photography, realistic skin texture, premium quality, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
-</div>
-<div class="box">
-<h2>Prompt 16</h2>
-<textarea readonly>Beautiful Indian woman in a luxurious golden saree, royal jewelry, elegant hairstyle, palace interior background, cinematic warm lighting, premium fashion portrait, realistic photography, masterpiece, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="young indian girl with graceful traditional look, embroidered ethnic outfit, natural beauty, flowing hair, warm sunlight, dreamy background, professional portrait photography, realistic details, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#ffafbd 0%,#ffc3a0 100%)"></div><div class="badge-num">#12</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #12</div><div class="prompt-box">Young Indian girl with graceful traditional look, embroidered ethnic outfit, natural beauty, flowing hair, warm sunlight, dreamy background, professional portrait photography, realistic details, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 17</h2>
-<textarea readonly>Indian girl portrait with traditional South Indian look, silk saree, temple jewelry, jasmine flowers, graceful expression, soft cinematic lighting, ultra realistic photography, highly detailed, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="indian bridal portrait, beautiful bride wearing red wedding lehenga, detailed gold jewelry, elegant makeup, emotional expression, luxury wedding photography style, cinematic lighting, ultra realistic, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#8B0000 0%,#FFD700 100%)"></div><div class="badge-num">#13</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #13</div><div class="prompt-box">Indian bridal portrait, beautiful bride wearing red wedding lehenga, detailed gold jewelry, elegant makeup, emotional expression, luxury wedding photography style, cinematic lighting, ultra realistic, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 18</h2>
-<textarea readonly>Beautiful Indian woman wearing a pastel designer outfit, elegant pose, luxury studio background, soft shadows, realistic facial features, professional beauty photography, magazine cover style, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="modern indian fashion girl portrait, stylish outfit, confident pose, urban background, cinematic street photography, realistic facial details, luxury fashion magazine style, masterpiece quality, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#232526 0%,#414345 100%)"></div><div class="badge-num">#14</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #14</div><div class="prompt-box">Modern Indian fashion girl portrait, stylish outfit, confident pose, urban background, cinematic street photography, realistic facial details, luxury fashion magazine style, masterpiece quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 19</h2>
-<textarea readonly>Indian queen style portrait, majestic royal attire, crown and jewelry, grand palace background, confident expression, cinematic lighting, ultra realistic portrait photography, masterpiece quality, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="elegant indian woman sitting beside a traditional window, beautiful saree, soft natural light, peaceful expression, artistic portrait photography, realistic skin texture, premium quality, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#3a7bd5 0%,#00d2ff 100%)"></div><div class="badge-num">#15</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #15</div><div class="prompt-box">Elegant Indian woman sitting beside a traditional window, beautiful saree, soft natural light, peaceful expression, artistic portrait photography, realistic skin texture, premium quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 20</h2>
-<textarea readonly>Beautiful Indian girl walking through a flower garden, elegant traditional dress, natural smile, golden hour sunlight, dreamy cinematic atmosphere, realistic portrait photography, ultra detailed, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
-</div>
-<div class="box">
-<h2>Prompt 21</h2>
-<textarea readonly>Ultimate Indian beauty portrait, elegant royal saree, diamond jewelry, glowing face, luxurious palace setting, cinematic golden lighting, realistic high fashion photography, ultra detailed masterpiece, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="beautiful indian woman in a luxurious golden saree, royal jewelry, elegant hairstyle, palace interior background, cinematic warm lighting, premium fashion portrait, realistic photography, masterpiece, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#FFD700 0%,#FFA500 100%)"></div><div class="badge-num">#16</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #16</div><div class="prompt-box">Beautiful Indian woman in a luxurious golden saree, royal jewelry, elegant hairstyle, palace interior background, cinematic warm lighting, premium fashion portrait, realistic photography, masterpiece, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 22</h2>
-<textarea readonly>Beautiful Indian woman in traditional bridal style, red lehenga, detailed gold ornaments, soft romantic lighting, wedding celebration background, professional luxury photography, masterpiece quality, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="indian girl portrait with traditional south indian look, silk saree, temple jewelry, jasmine flowers, graceful expression, soft cinematic lighting, ultra realistic photography, highly detailed, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#20002d 0%,#cbb4d4 100%)"></div><div class="badge-num">#17</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #17</div><div class="prompt-box">Indian girl portrait with traditional South Indian look, silk saree, temple jewelry, jasmine flowers, graceful expression, soft cinematic lighting, ultra realistic photography, highly detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 23</h2>
-<textarea readonly>Indian fashion model portrait, designer ethnic outfit, confident expression, modern luxury style, studio lighting, realistic skin texture, premium magazine photography, ultra detailed, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="beautiful indian woman wearing a pastel designer outfit, elegant pose, luxury studio background, soft shadows, realistic facial features, professional beauty photography, magazine cover style, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#e0c3fc 0%,#8ec5fc 100%)"></div><div class="badge-num">#18</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #18</div><div class="prompt-box">Beautiful Indian woman wearing a pastel designer outfit, elegant pose, luxury studio background, soft shadows, realistic facial features, professional beauty photography, magazine cover style, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 24</h2>
-<textarea readonly>Beautiful Indian girl portrait in a royal garden, elegant traditional dress, flowing hair, natural beauty, cinematic sunlight, dreamy atmosphere, realistic photography, masterpiece, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="indian queen style portrait, majestic royal attire, crown and jewelry, grand palace background, confident expression, cinematic lighting, ultra realistic portrait photography, masterpiece quality, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#141E30 0%,#243B55 50%,#FFD700 100%)"></div><div class="badge-num">#19</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #19</div><div class="prompt-box">Indian queen style portrait, majestic royal attire, crown and jewelry, grand palace background, confident expression, cinematic lighting, ultra realistic portrait photography, masterpiece quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<div class="box">
-<h2>Prompt 25</h2>
-<textarea readonly>Legendary Indian beauty portrait, stunning woman wearing luxurious traditional attire, royal jewelry, cinematic lighting, premium fashion photography, realistic details, masterpiece quality, best quality, 8K.</textarea>
-<br><br>
-<button onclick="copyPrompt(this)">📋 Copy Prompt</button>
+<div class="card" data-text="beautiful indian girl walking through a flower garden, elegant traditional dress, natural smile, golden hour sunlight, dreamy cinematic atmosphere, realistic portrait photography, ultra detailed, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#56ab2f 0%,#a8e063 50%,#FFD700 100%)"></div><div class="badge-num">#20</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #20</div><div class="prompt-box">Beautiful Indian girl walking through a flower garden, elegant traditional dress, natural smile, golden hour sunlight, dreamy cinematic atmosphere, realistic portrait photography, ultra detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
 </div>
 
-<p><a href="ai-girls.html">⬅ Back To AI Girls</a></p>
+<div class="card" data-text="ultimate indian beauty portrait, elegant royal saree, diamond jewelry, glowing face, luxurious palace setting, cinematic golden lighting, realistic high fashion photography, ultra detailed masterpiece, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#8E0E00 0%,#1F1C18 100%)"></div><div class="badge-num">#21</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #21</div><div class="prompt-box">Ultimate Indian beauty portrait, elegant royal saree, diamond jewelry, glowing face, luxurious palace setting, cinematic golden lighting, realistic high fashion photography, ultra detailed masterpiece, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
+</div>
 
+<div class="card" data-text="beautiful indian woman in traditional bridal style, red lehenga, detailed gold ornaments, soft romantic lighting, wedding celebration background, professional luxury photography, masterpiece quality, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#FF512F 0%,#F09819 100%)"></div><div class="badge-num">#22</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #22</div><div class="prompt-box">Beautiful Indian woman in traditional bridal style, red lehenga, detailed gold ornaments, soft romantic lighting, wedding celebration background, professional luxury photography, masterpiece quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
+</div>
+
+<div class="card" data-text="indian fashion model portrait, designer ethnic outfit, confident expression, modern luxury style, studio lighting, realistic skin texture, premium magazine photography, ultra detailed, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#000428 0%,#004e92 100%)"></div><div class="badge-num">#23</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #23</div><div class="prompt-box">Indian fashion model portrait, designer ethnic outfit, confident expression, modern luxury style, studio lighting, realistic skin texture, premium magazine photography, ultra detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
+</div>
+
+<div class="card" data-text="beautiful indian girl portrait in a royal garden, elegant traditional dress, flowing hair, natural beauty, cinematic sunlight, dreamy atmosphere, realistic photography, masterpiece, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#2C3E50 0%,#FD746C 100%)"></div><div class="badge-num">#24</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #24</div><div class="prompt-box">Beautiful Indian girl portrait in a royal garden, elegant traditional dress, flowing hair, natural beauty, cinematic sunlight, dreamy atmosphere, realistic photography, masterpiece, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
+</div>
+
+<div class="card" data-text="legendary indian beauty portrait, stunning woman wearing luxurious traditional attire, royal jewelry, cinematic lighting, premium fashion photography, realistic details, masterpiece quality, best quality, 8k.">
+<div class="img-wrap"><div style="width:100%;height:100%;background:linear-gradient(135deg,#FFD700 0%,#FFF8DC 50%,#FF8C00 100%)"></div><div class="badge-num">#25</div><div class="badge-type">INDIAN GIRL</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / indian</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Beautiful Indian Prompt #25</div><div class="prompt-box">Legendary Indian beauty portrait, stunning woman wearing luxurious traditional attire, royal jewelry, cinematic lighting, premium fashion photography, realistic details, masterpiece quality, best quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon</div></div>
+</div>
+
+</div>
+<div class="footer"><a class="back" href="ai-girls.html">← Back To AI Girls</a><div style="font-size:11px;color:rgba(255,255,255,0.2)">© PromptMaharaja • beautiful-indian-girl-portrait.html</div></div>
+<div class="toast" id="toast">Prompt Copied! 👑</div>
 <script>
-function copyPrompt(button){
-const prompt = button.parentElement.querySelector("textarea").value;
-navigator.clipboard.writeText(prompt);
-alert("Prompt Copied!");
+function copyPrompt(btn){
+  const text = btn.closest('.card-body').querySelector('.prompt-box').innerText;
+  navigator.clipboard.writeText(text).then(()=>{
+    const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);
+    btn.innerText='✅ Copied!';setTimeout(()=>btn.innerText='📋 Copy Prompt',2000);
+  });
 }
+function toggleNeg(btn){const box=btn.closest('.card-body').querySelector('.neg-box');box.style.display=box.style.display==='none'?'block':'none';}
+function filterCards(q){q=q.toLowerCase();document.querySelectorAll('.card').forEach(c=>{c.style.display=c.dataset.text.includes(q)?'':'none';});}
 </script>
-
 </body>
 </html>

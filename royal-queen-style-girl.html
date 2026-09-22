@@ -1,53 +1,206 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Royal Queen Style Girl</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Royal Queen Style Girl - 25 Premium Prompts | PromptMaharaja</title>
 <style>
-body{
-background:#000;
-color:#FFD700;
-font-family:Arial,sans-serif;
-text-align:center;
-padding:20px;
-}
-.box{
-background:#111;
-border:1px solid #FFD700;
-border-radius:15px;
-padding:20px;
-margin:20px auto;
-max-width:700px;
-}
-a{
-color:#FFD700;
-text-decoration:none;
-}
-textarea{
-width:90%;
-height:250px;
-background:#000;
-color:#FFD700;
-border:1px solid #FFD700;
-padding:10px;
-}
-button{
-background:#FFD700;
-border:none;
-padding:10px 20px;
-cursor:pointer;
-margin-top:15px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{background:#070708;color:#fff;min-height:100vh}
+.header{background:#111113;border-bottom:1px solid rgba(255,215,0,0.15);padding:14px 16px;position:sticky;top:0;z-index:50;backdrop-filter:blur(20px)}
+.header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,#FFD700,#FFA500);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#000;font-size:14px}
+.logo-text{color:#FFD700;font-weight:800;letter-spacing:0.02em}
+.badge-live{background:#22c55e;color:#000;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:800;letter-spacing:0.05em}
+.hero{max-width:1280px;margin:0 auto;padding:24px 16px 8px}
+.hero h1{font-size:28px;font-weight:900;letter-spacing:-0.02em;line-height:1.1}
+.hero h1 span{color:#FFD700}
+.hero p{color:rgba(255,255,255,0.45);font-size:13px;margin-top:8px}
+.search-box{margin-top:18px;background:#121214;border:1px solid rgba(255,215,0,0.12);border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.search-box input{background:transparent;border:none;outline:none;color:#fff;width:100%;font-size:14px}
+.grid{max-width:1280px;margin:0 auto;padding:16px;display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:#121214;border:1px solid rgba(255,255,255,0.06);border-radius:20px;overflow:hidden;transition:all 0.3s}
+.card:hover{border-color:rgba(255,215,0,0.25);transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,0.4),0 0 20px rgba(255,215,0,0.08)}
+.img-wrap{height:220px;position:relative;overflow:hidden}
+.img-grad{width:100%;height:100%}
+.badge-num{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);border:1px solid rgba(255,215,0,0.2);color:#FFD700;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:800}
+.badge-type{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;padding:5px 10px;border-radius:20px;font-size:10px;font-weight:900}
+.card-body{padding:14px}
+.card-title{font-size:14px;font-weight:700;line-height:1.3}
+.prompt-box{margin-top:10px;background:#0a0a0b;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:10px;font-size:12px;color:rgba(255,255,255,0.7);line-height:1.5;height:110px;overflow:auto}
+.actions{margin-top:12px;display:flex;gap:8px}
+.btn-copy{flex:1;background:#FFD700;color:#000;border:none;border-radius:10px;padding:10px;font-weight:800;font-size:13px;cursor:pointer}
+.btn-copy:active{transform:scale(0.98)}
+.btn-neg{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:10px 12px;font-size:12px;cursor:pointer}
+.footer{max-width:1280px;margin:20px auto;padding:0 16px 30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.back{background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);color:#fff;padding:10px 16px;border-radius:30px;text-decoration:none;font-size:13px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(100px);background:#FFD700;color:#000;padding:12px 18px;border-radius:30px;font-weight:800;font-size:13px;transition:all 0.3s;z-index:100;opacity:0}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 </style>
-</head><body><h1>👑 Royal Queen Style Girl</h1><div class="box"><textarea readonly>
-Majestic royal queen, luxurious crown with precious gemstones, elegant royal gown, detailed facial features, confident expression, cinematic lighting, palace background, ultra realistic, masterpiece quality, golden royal atmosphere, luxury fashion photography, highly detailed, 8k resolution.
-</textarea><br><br>
+</head>
+<body>
+<div class="header"><div class="header-inner"><a class="logo" href="ai-girls.html"><div class="logo-icon">PM</div><div class="logo-text">PromptMaharaja</div></a><div class="badge-live">25 PROMPTS • LIVE</div></div></div>
+<div class="hero">
+<h1>👑 <span>Royal Queen Style Girl</span> - Premium Prompts</h1>
+<p>Image-First Gallery • Luxury royal queen portraits • Click copy to use in Midjourney, Leonardo, SDXL</p>
+<div class="search-box"><span style="color:#FFD700">🔍</span><input id="search" placeholder="Search queen, crown, palace, royal, Mughal..." oninput="filterCards(this.value)"></div>
+</div>
+<div class="grid" id="grid">
 
-<button onclick="copyPrompt()">📋 Copy Prompt</button>
+<div class="card" data-text=" majestic royal queen, luxurious crown with precious gemstones, elegant royal gown, detailed facial features, confident expression, cinematic lighting, palace background, ultra realistic, masterpiece quality, golden royal atmosphere, luxury fashion photography, highly detailed, 8k resolution.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#FFD700 0%,#FF8C00 50%,#8B0000 100%)"></div><div class="badge-num">#01</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #1</div><div class="prompt-box">Majestic royal queen, luxurious crown with precious gemstones, elegant royal gown, detailed facial features, confident expression, cinematic lighting, palace background, ultra realistic, masterpiece quality, golden royal atmosphere, luxury fashion photography, highly detailed, 8k resolution.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
 
-</div><p><a href="ai-girls.html">⬅ Back To AI Girls</a></p><script>
-function copyPrompt() {
-const promptText = document.querySelector("textarea").value;
-navigator.clipboard.writeText(promptText);
-alert("Prompt Copied!");
+<div class="card" data-text="royal queen sitting on golden throne, wearing diamond crown and red velvet gown, powerful confident pose, grand palace hall background, cinematic warm lighting, ultra realistic portrait, luxury fashion style, 8k masterpiece.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#FFD700 100%)"></div><div class="badge-num">#02</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #2</div><div class="prompt-box">Royal queen sitting on golden throne, wearing diamond crown and red velvet gown, powerful confident pose, grand palace hall background, cinematic warm lighting, ultra realistic portrait, luxury fashion style, 8K masterpiece.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="beautiful queen in royal mughal attire, intricate gold embroidery, pearl jewelry, elegant crown, soft palace window light, realistic skin texture, premium fashion photography, ultra detailed, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#8B4513 0%,#FFD700 50%,#FF1493 100%)"></div><div class="badge-num">#03</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #3</div><div class="prompt-box">Beautiful queen in royal Mughal attire, intricate gold embroidery, pearl jewelry, elegant crown, soft palace window light, realistic skin texture, premium fashion photography, ultra detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="indian royal queen portrait, traditional rajwada jewelry, silk saree with zari work, royal crown, expressive eyes, cinematic lighting, luxury palace background, highly detailed, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#4B0082 0%,#FFD700 100%)"></div><div class="badge-num">#04</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #4</div><div class="prompt-box">Indian royal queen portrait, traditional Rajwada jewelry, silk saree with zari work, royal crown, expressive eyes, cinematic lighting, luxury palace background, highly detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="european royal queen style, elegant white and gold gown, crystal crown, graceful pose, castle palace interior, soft cinematic glow, realistic photography, masterpiece quality, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#000000 0%,#434343 50%,#FFD700 100%)"></div><div class="badge-num">#05</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #5</div><div class="prompt-box">European royal queen style, elegant white and gold gown, crystal crown, graceful pose, castle palace interior, soft cinematic glow, realistic photography, masterpiece quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="queen in black royal gown with golden crown, dramatic lighting, luxury palace background, confident fierce expression, ultra realistic fashion portrait, highly detailed, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#FF69B4 0%,#FFD700 100%)"></div><div class="badge-num">#06</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #6</div><div class="prompt-box">Queen in black royal gown with golden crown, dramatic lighting, luxury palace background, confident fierce expression, ultra realistic fashion portrait, highly detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="young queen wearing rose gold crown and pink royal dress, gentle smile, flower palace garden background, soft golden hour lighting, realistic portrait photography, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#2C3E50 0%,#FD746C 100%)"></div><div class="badge-num">#07</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #7</div><div class="prompt-box">Young queen wearing rose gold crown and pink royal dress, gentle smile, flower palace garden background, soft golden hour lighting, realistic portrait photography, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="royal queen in ancient egyptian style, golden crown with gems, luxurious royal attire, majestic palace pillars background, cinematic lighting, ultra realistic, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#141E30 0%,#243B55 50%,#FFD700 100%)"></div><div class="badge-num">#08</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #8</div><div class="prompt-box">Royal queen in ancient Egyptian style, golden crown with gems, luxurious royal attire, majestic palace pillars background, cinematic lighting, ultra realistic, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="queen with long flowing hair and diamond tiara, off-shoulder royal gown, luxury palace balcony background, soft studio lighting, realistic skin texture, premium fashion, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#8E0E00 0%,#1F1C18 100%)"></div><div class="badge-num">#09</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #9</div><div class="prompt-box">Queen with long flowing hair and diamond tiara, off-shoulder royal gown, luxury palace balcony background, soft studio lighting, realistic skin texture, premium fashion, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="indian rajasthani queen, heavy traditional jewelry, red bandhani poshak, royal crown, palace courtyard background, warm cinematic light, ultra detailed portrait, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#3A1C71 0%,#D76D77 50%,#FFAF7B 100%)"></div><div class="badge-num">#10</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #10</div><div class="prompt-box">Indian Rajasthani queen, heavy traditional jewelry, red bandhani poshak, royal crown, palace courtyard background, warm cinematic light, ultra detailed portrait, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="futuristic royal queen, holographic crown, metallic royal gown, sci-fi palace background, neon cinematic lighting, ultra realistic luxury fashion, 8k masterpiece.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#0f0c29 0%,#302b63 50%,#24243e 100%)"></div><div class="badge-num">#11</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #11</div><div class="prompt-box">Futuristic royal queen, holographic crown, metallic royal gown, sci-fi palace background, neon cinematic lighting, ultra realistic luxury fashion, 8K masterpiece.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="queen in royal blue velvet gown, sapphire crown, elegant hand on throne, grand palace hall with chandeliers, cinematic lighting, realistic photography, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#000428 0%,#004e92 50%,#FFD700 100%)"></div><div class="badge-num">#12</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #12</div><div class="prompt-box">Queen in royal blue velvet gown, sapphire crown, elegant hand on throne, grand palace hall with chandeliers, cinematic lighting, realistic photography, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="beautiful queen wearing golden armor crown, warrior queen style, royal cape, battlefield palace background, dramatic lighting, ultra realistic, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#232526 0%,#414345 50%,#FFD700 100%)"></div><div class="badge-num">#13</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #13</div><div class="prompt-box">Beautiful queen wearing golden armor crown, warrior queen style, royal cape, battlefield palace background, dramatic lighting, ultra realistic, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="royal queen bridal style, red royal lehenga with crown, heavy gold jewelry, palace wedding background, soft romantic lighting, realistic photography, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#FF512F 0%,#DD2476 100%)"></div><div class="badge-num">#14</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #14</div><div class="prompt-box">Royal queen bridal style, red royal lehenga with crown, heavy gold jewelry, palace wedding background, soft romantic lighting, realistic photography, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="queen in winter royal attire, white fur royal coat, silver crown with diamonds, snow palace background, soft cinematic cold lighting, ultra detailed, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#E0EAFC 0%,#CFDEF3 50%,#FFD700 100%)"></div><div class="badge-num">#15</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #15</div><div class="prompt-box">Queen in winter royal attire, white fur royal coat, silver crown with diamonds, snow palace background, soft cinematic cold lighting, ultra detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="south indian royal queen, temple jewelry, kanjeevaram silk saree, golden crown, traditional palace background, warm cinematic glow, realistic portrait, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#8B0000 0%,#FFD700 50%,#FF8C00 100%)"></div><div class="badge-num">#16</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #16</div><div class="prompt-box">South Indian royal queen, temple jewelry, Kanjeevaram silk saree, golden crown, traditional palace background, warm cinematic glow, realistic portrait, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="queen portrait close-up, detailed crown with emeralds, expressive eyes, soft bokeh palace background, shallow depth of field, realistic skin, luxury photography, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#20002d 0%,#cbb4d4 100%)"></div><div class="badge-num">#17</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #17</div><div class="prompt-box">Queen portrait close-up, detailed crown with emeralds, expressive eyes, soft bokeh palace background, shallow depth of field, realistic skin, luxury photography, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="royal queen with twin braids and small crown, youthful elegant look, pastel royal gown, garden palace background, natural sunlight, realistic fashion portrait, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#ffafbd 0%,#ffc3a0 50%,#FFD700 100%)"></div><div class="badge-num">#18</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #18</div><div class="prompt-box">Royal queen with twin braids and small crown, youthful elegant look, pastel royal gown, garden palace background, natural sunlight, realistic fashion portrait, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="dark queen style, black diamond crown, gothic royal gown, moody palace background, dramatic shadows and highlights, ultra realistic, masterpiece, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#000000 0%,#434343 100%)"></div><div class="badge-num">#19</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #19</div><div class="prompt-box">Dark queen style, black diamond crown, gothic royal gown, moody palace background, dramatic shadows and highlights, ultra realistic, masterpiece, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="queen in golden saree and royal crown, indian queen fusion style, luxury palace interior, warm golden lighting, realistic dslr photography, highly detailed, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#FFD700 0%,#FFF8DC 100%)"></div><div class="badge-num">#20</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #20</div><div class="prompt-box">Queen in golden saree and royal crown, Indian queen fusion style, luxury palace interior, warm golden lighting, realistic DSLR photography, highly detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="queen holding royal scepter, luxurious crown, red royal robe with fur, throne room background, cinematic spotlight lighting, ultra realistic, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#8B0000 0%,#FFD700 100%)"></div><div class="badge-num">#21</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #21</div><div class="prompt-box">Queen holding royal scepter, luxurious crown, red royal robe with fur, throne room background, cinematic spotlight lighting, ultra realistic, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="beautiful queen in peacock blue gown, peacock feather crown, palace garden with peacocks, vibrant cinematic lighting, realistic luxury fashion, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#006994 0%,#00CC99 50%,#FFD700 100%)"></div><div class="badge-num">#22</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #22</div><div class="prompt-box">Beautiful queen in peacock blue gown, peacock feather crown, palace garden with peacocks, vibrant cinematic lighting, realistic luxury fashion, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="queen in royal purple gown, amethyst crown, elegant pose on palace stairs, soft cinematic lighting, realistic portrait photography, ultra detailed, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#4B0082 0%,#8A2BE2 100%)"></div><div class="badge-num">#23</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #23</div><div class="prompt-box">Queen in royal purple gown, amethyst crown, elegant pose on palace stairs, soft cinematic lighting, realistic portrait photography, ultra detailed, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="traditional maratha queen style, nath and choker, paithani saree with crown, historic palace background, warm natural lighting, realistic photography, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#FF6347 0%,#FFD700 100%)"></div><div class="badge-num">#24</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #24</div><div class="prompt-box">Traditional Maratha queen style, nath and choker, Paithani saree with crown, historic palace background, warm natural lighting, realistic photography, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+<div class="card" data-text="ultimate legendary queen portrait, diamond studded golden crown, ultra luxurious royal gown with embroidery, grandest palace background, divine cinematic lighting, masterpiece, best quality, 8k.">
+<div class="img-wrap"><div class="img-grad" style="background:linear-gradient(135deg,#FFD700 0%,#FFA500 50%,#FF4500 100%)"></div><div class="badge-num">#25</div><div class="badge-type">ROYAL QUEEN</div><div style="position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,#121214,transparent)"></div><div style="position:absolute;bottom:10px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:rgba(255,255,255,0.6)">👑 ai-girls / queen</span><span style="font-size:10px;background:#FFD700;color:#000;padding:3px 8px;border-radius:20px;font-weight:800">COPY READY</span></div></div>
+<div class="card-body"><div class="card-title">Royal Queen Prompt #25</div><div class="prompt-box">Ultimate legendary queen portrait, diamond studded golden crown, ultra luxurious royal gown with embroidery, grandest palace background, divine cinematic lighting, masterpiece, best quality, 8K.</div><div class="actions"><button class="btn-copy" onclick="copyPrompt(this)">📋 Copy Prompt</button><button class="btn-neg" onclick="toggleNeg(this)">Neg</button></div><div class="neg-box" style="display:none;margin-top:8px;background:#000;border:1px dashed rgba(255,215,0,0.2);border-radius:8px;padding:8px;font-size:11px;color:rgba(255,255,255,0.5)">Negative: blurry, low quality, distorted face, extra limbs, bad anatomy, cartoon, anime</div></div>
+</div>
+
+</div>
+<div class="footer"><a class="back" href="ai-girls.html">← Back To AI Girls</a><div style="font-size:11px;color:rgba(255,255,255,0.2)">© PromptMaharaja • #070708 • Gold #FFD700 • royal-queen-style-girl.html</div></div>
+<div class="toast" id="toast">Prompt Copied! 👑</div>
+<script>
+function copyPrompt(btn){
+  const card = btn.closest('.card-body');
+  const text = card.querySelector('.prompt-box').innerText;
+  navigator.clipboard.writeText(text).then(()=>{
+    const t=document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),2000);
+    btn.innerText='✅ Copied!';
+    setTimeout(()=>btn.innerText='📋 Copy Prompt',2000);
+  });
 }
-</script></body>
+function toggleNeg(btn){
+  const box = btn.closest('.card-body').querySelector('.neg-box');
+  box.style.display = box.style.display==='none'?'block':'none';
+}
+function filterCards(q){
+  q=q.toLowerCase();
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display = c.dataset.text.includes(q) ? '' : 'none';
+  });
+}
+</script>
+</body>
 </html>

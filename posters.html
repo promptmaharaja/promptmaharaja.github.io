@@ -9,104 +9,109 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#050507;color:#fff;font-family:'Outfit',sans-serif;padding:16px 14px 40px}
-.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+body{background:#050507;color:#fff;font-family:'Outfit',sans-serif}
+.header{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#080808;border-bottom:1px solid #1a1a1a;position:sticky;top:0;z-index:10}
 .logo{display:flex;align-items:center;gap:8px}
-.logo img{width:38px;height:38px;border-radius:50%;border:1px solid #FFD700}
-.logo-text{color:#FFD700;font-weight:800;font-size:13px;line-height:1}
-.logo-text span{display:block;color:#888;font-weight:400;font-size:9px;letter-spacing:1px}
-.top-badge{background:#111;border:1px solid #222;padding:6px 12px;border-radius:20px;font-size:11px;color:#aaa}
-.hub-badge{display:inline-flex;background:#1a1500;border:1px solid #FFD70033;color:#FFD700;font-size:9px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:1px;margin-bottom:8px}
-.title{font-size:24px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:6px}
-.title small{font-size:14px;color:#666;font-weight:400}
-.desc{color:#666;font-size:11px;line-height:1.5;margin-bottom:14px}
-.search{width:100%;background:#0E0E0E;border:1px solid #222;border-radius:24px;padding:11px 14px;color:#fff;font-size:11px;outline:none;margin-bottom:10px}
-.search::placeholder{color:#444}
-.stats{color:#444;font-size:9px;margin-bottom:14px;letter-spacing:0.5px}
+.logo img{width:40px;height:40px;border-radius:50%;border:1px solid #FFD700}
+.logo-text{color:#FFD700;font-weight:800;font-size:12px;line-height:1}
+.logo-text .blue{color:#3B82F6}
+.logo-text span{display:block;color:#8a7a20;font-weight:600;font-size:8px;letter-spacing:1.5px}
+.top-badge{background:#111;border:1px solid #333;padding:6px 14px;border-radius:20px;font-size:11px;color:#aaa}
+.container{padding:12px}
+.hub-badge{display:inline-flex;background:#1a1500;border:1px solid #FFD70044;color:#FFD700;font-size:9px;font-weight:700;padding:5px 10px;border-radius:20px;letter-spacing:1px;margin-bottom:10px}
+.title{font-size:22px;font-weight:800;margin-bottom:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.title small{font-size:12px;color:#666;font-weight:400}
+.desc{color:#666;font-size:11px;line-height:1.4;margin-bottom:12px}
+.search{width:100%;background:#111;border:1px solid #222;border-radius:20px;padding:12px 14px;color:#fff;font-size:12px;outline:none;margin-bottom:10px}
+.search::placeholder{color:#555}
+.stats{color:#555;font-size:10px;margin-bottom:14px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.card{background:#111;border-radius:16px;overflow:hidden;border:1px solid #1a1a1a;position:relative}
-.card-top{height:132px;position:relative;display:flex;align-items:center;justify-content:center}
-.card-top::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(transparent, rgba(0,0,0,0.8))}
-.badge{position:absolute;top:8px;left:8px;font-size:8px;font-weight:800;padding:4px 8px;border-radius:10px;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.1)}
-.badge-live{left:38px;background:#00C853;color:#000;border:none}
-.badge-count{right:8px;left:auto;background:#00C853;color:#000;border:none;font-size:8px}
-.icon-box{width:56px;height:56px;background:rgba(0,0,0,0.3);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 8px 20px rgba(0,0,0,0.3)}
-.card-bottom{padding:10px}
-.card-title{font-size:11px;font-weight:700;line-height:1.2;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.card-desc{font-size:8px;color:#666;margin-bottom:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.card-foot{display:flex;align-items:center;justify-content:space-between}
-.path{flex:1;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:20px;padding:5px 8px;font-size:7px;color:#555;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.open-btn{background:#FFEB3B;color:#000;border:none;padding:5px 12px;border-radius:20px;font-size:8px;font-weight:800;margin-left:6px;cursor:pointer}
+.card{background:#111;border-radius:18px;overflow:hidden;border:1px solid rgba(255,215,0,0.15)}
+.card-top{height:150px;position:relative;display:flex;align-items:center;justify-content:center}
+.card-top::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent, rgba(0,0,0,0.85))}
+.badge{position:absolute;top:8px;font-size:8px;font-weight:800;padding:4px 8px;border-radius:14px;z-index:2}
+.badge-num{left:8px;background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.15);color:#fff}
+.badge-live{left:38px;background:#00E676;color:#000}
+.badge-count{right:8px;background:#00E676;color:#000}
+.icon-box{width:64px;height:64px;background:rgba(0,0,0,0.25);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.12);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 20px rgba(0,0,0,0.5);z-index:2}
+.card-bottom{padding:10px;background:#0a0a0a}
+.card-title{font-size:11px;font-weight:800;line-height:1.2;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-desc{font-size:9px;color:#777;margin-bottom:8px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.path{flex:1;background:#111;border:1px solid #1e1e1e;border-radius:14px;padding:6px 8px;font-size:7px;color:#555;overflow:hidden;display:flex;align-items:center;gap:4px;white-space:nowrap}
+.path-dot{width:5px;height:5px;background:#FFD700;border-radius:50%;flex-shrink:0}
+.open-btn{background:#FFEB3B;color:#000;border:none;padding:7px 12px;border-radius:14px;font-size:8px;font-weight:800;cursor:pointer;flex-shrink:0}
+@media(min-width:768px){.grid{grid-template-columns:1fr 1fr 1fr}.card-top{height:180px}.icon-box{width:72px;height:72px;font-size:36px}}
 
-.g1{background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);}
-.g2{background: linear-gradient(135deg, #141E30, #243B55);}
-.g3{background: linear-gradient(135deg, #232526, #414345);}
-.g4{background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);}
-.g5{background: linear-gradient(135deg, #000428, #004e92);}
-.g6{background: linear-gradient(135deg, #2C3E50, #FD746C);}
-.g7{background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);}
-.g8{background: linear-gradient(135deg, #373B44, #4286f4);}
-.g9{background: linear-gradient(135deg, #200122, #6f0000);}
-.g10{background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);}
+.g1{background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);}
+.g2{background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);}
+.g3{background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);}
+.g4{background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);}
+.g5{background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);}
+.g6{background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);}
+.g7{background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);}
+.g8{background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);}
+.g9{background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);}
+.g10{background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);}
 
 </style>
 </head>
 <body>
-<div class="header"><div class="logo"><img src="IMG_20260607_232627.jpg"><div class="logo-text">PromptMaharaja<span>PREMIUM STUDIO</span></div></div><div class="top-badge">AI</div></div>
+<div class="header"><div class="logo"><img src="IMG_20260607_232627.jpg"><div class="logo-text"><span class="blue">Prompt</span> Maharaja<span>PREMIUM STUDIO</span></div></div><div class="top-badge">AI</div></div>
+<div class="container">
 <div class="hub-badge">👑 MAIN CATEGORY HUB</div>
 <div class="title">🖼️ Posters Prompts <small>(250 Prompts)</small></div>
-<div class="desc">Festival, movie, event & creative poster designs. Tap a card to open its prompt pack.</div>
+<div class="desc">Festival, movie, event & creative poster designs. Tap a card to open its prompt pack. Designed for mobile edit in GitHub.</div>
 <input class="search" id="search" placeholder="🔍 Search subcategories... e.g. garba, movie, festival..." onkeyup="filter()">
 <div class="stats">10 subcategories • 10 ready • 250 Prompts LIVE 🖼️</div>
 <div class="grid" id="grid">
 
 <div class="card" data-name="navratri garba festival poster">
-  <div class="card-top g1"><span class="badge">#01</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">💃</div></div>
-  <div class="card-bottom"><div class="card-title">Navratri Garba Festival Poster</div><div class="card-desc">Colorful chaniya, dandiya...</div><div class="card-foot"><div class="path">● posters / navratri-garba-festival</div><button class="open-btn" onclick="location.href='posters/navratri-garba-festival.html'">OPEN →</button></div></div>
+  <div class="card-top g1"><span class="badge badge-num">#01</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">💃</div></div>
+  <div class="card-bottom"><div class="card-title">Navratri Garba Festival Poster</div><div class="card-desc">Colorful chaniya, dandiya...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / navratri-garba-festival</div><button class="open-btn" onclick="location.href='posters/navratri-garba-festival.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="bollywood movie poster">
-  <div class="card-top g2"><span class="badge">#02</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🎬</div></div>
-  <div class="card-bottom"><div class="card-title">Bollywood Movie Poster</div><div class="card-desc">Epic, cinematic, dramatic...</div><div class="card-foot"><div class="path">● posters / bollywood-movie-poster</div><button class="open-btn" onclick="location.href='posters/bollywood-movie-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g2"><span class="badge badge-num">#02</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🎬</div></div>
+  <div class="card-bottom"><div class="card-title">Bollywood Movie Poster</div><div class="card-desc">Epic, cinematic, dramatic...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / bollywood-movie-poster</div><button class="open-btn" onclick="location.href='posters/bollywood-movie-poster.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="concert music poster">
-  <div class="card-top g3"><span class="badge">#03</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🎵</div></div>
-  <div class="card-bottom"><div class="card-title">Concert Music Poster</div><div class="card-desc">Neon, crowd, stage lights...</div><div class="card-foot"><div class="path">● posters / concert-music-poster</div><button class="open-btn" onclick="location.href='posters/concert-music-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g3"><span class="badge badge-num">#03</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🎵</div></div>
+  <div class="card-bottom"><div class="card-title">Concert Music Poster</div><div class="card-desc">Neon, crowd, stage lights...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / concert-music-poster</div><button class="open-btn" onclick="location.href='posters/concert-music-poster.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="motivational quote poster">
-  <div class="card-top g4"><span class="badge">#04</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">💪</div></div>
-  <div class="card-bottom"><div class="card-title">Motivational Quote Poster</div><div class="card-desc">Typography, minimal, inspiring...</div><div class="card-foot"><div class="path">● posters / motivational-quote-poster</div><button class="open-btn" onclick="location.href='posters/motivational-quote-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g4"><span class="badge badge-num">#04</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">💪</div></div>
+  <div class="card-bottom"><div class="card-title">Motivational Quote Poster</div><div class="card-desc">Typography, minimal, inspiring...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / motivational-quote-poster</div><button class="open-btn" onclick="location.href='posters/motivational-quote-poster.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="sale offer poster">
-  <div class="card-top g5"><span class="badge">#05</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🏷️</div></div>
-  <div class="card-bottom"><div class="card-title">Sale Offer Poster</div><div class="card-desc">Bold, discount, e-commerce...</div><div class="card-foot"><div class="path">● posters / sale-offer-poster</div><button class="open-btn" onclick="location.href='posters/sale-offer-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g5"><span class="badge badge-num">#05</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🏷️</div></div>
+  <div class="card-bottom"><div class="card-title">Sale Offer Poster</div><div class="card-desc">Bold, discount, e-commerce...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / sale-offer-poster</div><button class="open-btn" onclick="location.href='posters/sale-offer-poster.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="travel adventure poster">
-  <div class="card-top g6"><span class="badge">#06</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">✈️</div></div>
-  <div class="card-bottom"><div class="card-title">Travel Adventure Poster</div><div class="card-desc">Mountains, vintage, wanderlust...</div><div class="card-foot"><div class="path">● posters / travel-adventure-poster</div><button class="open-btn" onclick="location.href='posters/travel-adventure-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g6"><span class="badge badge-num">#06</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">✈️</div></div>
+  <div class="card-bottom"><div class="card-title">Travel Adventure Poster</div><div class="card-desc">Mountains, vintage, wanderlust...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / travel-adventure-poster</div><button class="open-btn" onclick="location.href='posters/travel-adventure-poster.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="food festival poster">
-  <div class="card-top g7"><span class="badge">#07</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🍔</div></div>
-  <div class="card-bottom"><div class="card-title">Food Festival Poster</div><div class="card-desc">Delicious, vibrant, yummy...</div><div class="card-foot"><div class="path">● posters / food-festival-poster</div><button class="open-btn" onclick="location.href='posters/food-festival-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g7"><span class="badge badge-num">#07</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🍔</div></div>
+  <div class="card-bottom"><div class="card-title">Food Festival Poster</div><div class="card-desc">Delicious, vibrant, yummy...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / food-festival-poster</div><button class="open-btn" onclick="location.href='posters/food-festival-poster.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="fitness gym poster">
-  <div class="card-top g8"><span class="badge">#08</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🏋️</div></div>
-  <div class="card-bottom"><div class="card-title">Fitness Gym Poster</div><div class="card-desc">Strong, bodybuilding, power...</div><div class="card-foot"><div class="path">● posters / fitness-gym-poster</div><button class="open-btn" onclick="location.href='posters/fitness-gym-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g8"><span class="badge badge-num">#08</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🏋️</div></div>
+  <div class="card-bottom"><div class="card-title">Fitness Gym Poster</div><div class="card-desc">Strong, bodybuilding, power...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / fitness-gym-poster</div><button class="open-btn" onclick="location.href='posters/fitness-gym-poster.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="wedding invite poster">
-  <div class="card-top g9"><span class="badge">#09</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">💒</div></div>
-  <div class="card-bottom"><div class="card-title">Wedding Invite Poster</div><div class="card-desc">Elegant, floral, luxury...</div><div class="card-foot"><div class="path">● posters / wedding-invite-poster</div><button class="open-btn" onclick="location.href='posters/wedding-invite-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g9"><span class="badge badge-num">#09</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">💒</div></div>
+  <div class="card-bottom"><div class="card-title">Wedding Invite Poster</div><div class="card-desc">Elegant, floral, luxury...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / wedding-invite-poster</div><button class="open-btn" onclick="location.href='posters/wedding-invite-poster.html'">OPEN →</button></div></div>
 </div>
 <div class="card" data-name="anime expo poster">
-  <div class="card-top g10"><span class="badge">#10</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🌸</div></div>
-  <div class="card-bottom"><div class="card-title">Anime Expo Poster</div><div class="card-desc">Kawaii, shonen, colorful...</div><div class="card-foot"><div class="path">● posters / anime-expo-poster</div><button class="open-btn" onclick="location.href='posters/anime-expo-poster.html'">OPEN →</button></div></div>
+  <div class="card-top g10"><span class="badge badge-num">#10</span><span class="badge badge-live">● LIVE</span><span class="badge badge-count">25 Prompts</span><div class="icon-box">🌸</div></div>
+  <div class="card-bottom"><div class="card-title">Anime Expo Poster</div><div class="card-desc">Kawaii, shonen, colorful...</div><div class="card-foot"><div class="path"><span class="path-dot"></span>posters / anime-expo-poster</div><button class="open-btn" onclick="location.href='posters/anime-expo-poster.html'">OPEN →</button></div></div>
+</div>
 </div>
 </div>
 <script>
 function filter(){
   const q=document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('.card').forEach(c=>{
-    c.style.display=c.dataset.name.includes(q)?'':'none';
-  });
+  document.querySelectorAll('.card').forEach(c=>{c.style.display=c.dataset.name.includes(q)?'':'none'});
 }
 </script>
 </body>

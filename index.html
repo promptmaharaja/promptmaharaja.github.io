@@ -28,32 +28,30 @@ Error generating stack: `+o.message+`
 </script>
   <script>(function(){function m(a){var h=a.getAttribute("href");if(!h)return;try{var u=new URL(h,document.baseURI);if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener noreferrer";}}catch(e){}}function s(){document.querySelectorAll("a[href]").forEach(m);}if(document.readyState!=="loading"){s();}else{document.addEventListener("DOMContentLoaded",s);}document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(a){m(a);}},true);})();</script>
 
-<!-- Legal Menu Clickable Script -->
+<!-- Forced Reload Script for Legal Links -->
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
+    setInterval(() => {
       const links = {
         'Privacy Policy': '/privacy.html',
         'Terms & Conditions': '/terms.html',
         'License': '/license.html',
-        'Refund Policy': '/refund.html',
-        'About Us': '/about.html'
+        'Refund Policy': '/refund.html'
       };
 
       document.querySelectorAll('div, p, span, li, a').forEach(el => {
         const text = el.innerText ? el.innerText.trim() : '';
-        if (links[text] && !el.querySelector('a')) {
-          const a = document.createElement('a');
-          a.href = links[text];
-          a.innerText = text;
-          a.style.color = 'inherit';
-          a.style.textDecoration = 'none';
-          a.style.cursor = 'pointer';
-          el.innerHTML = '';
-          el.appendChild(a);
+        if (links[text] && !el.getAttribute('data-legal-fixed')) {
+          el.setAttribute('data-legal-fixed', 'true');
+          el.style.cursor = 'pointer';
+          el.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = links[text];
+          };
         }
       });
-    }, 1200);
+    }, 500);
   });
 </script>
   

@@ -28,50 +28,34 @@ Error generating stack: `+o.message+`
 </script>
   <script>(function(){function m(a){var h=a.getAttribute("href");if(!h)return;try{var u=new URL(h,document.baseURI);if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener noreferrer";}}catch(e){}}function s(){document.querySelectorAll("a[href]").forEach(m);}if(document.readyState!=="loading"){s();}else{document.addEventListener("DOMContentLoaded",s);}document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(a){m(a);}},true);})();</script>
 
-<!-- Final React Router Bypass Legal Script -->
+<!-- Final Navigation Fix for Legal Folder URLs -->
 <script>
-  const legalData = {
-    'Privacy Policy': '<h2>Privacy Policy</h2><p>Last updated: September 2026</p><p>Welcome to Prompt Maharaja. We respect your privacy and use standard cookies to serve ads via Google AdSense.</p>',
-    'Terms & Conditions': '<h2>Terms & Conditions</h2><p>By using Prompt Maharaja, you agree to our terms of service and usage guidelines for AI prompts.</p>',
-    'License': '<h2>License Policy</h2><p>All AI prompts provided are available for personal and commercial usage unless specified otherwise.</p>',
-    'Refund Policy': '<h2>Refund Policy</h2><p>Due to the digital nature of AI prompts, purchases are non-refundable once delivered.</p>'
-  };
-
   window.addEventListener('DOMContentLoaded', () => {
+    const legalRoutes = {
+      'Privacy Policy': '/privacy/',
+      'Terms & Conditions': '/terms/',
+      'License': '/license/',
+      'Refund Policy': '/refund/'
+    };
+
     setInterval(() => {
       document.querySelectorAll('div, p, span, li, a').forEach(el => {
         const text = el.innerText ? el.innerText.trim() : '';
-        if (legalData[text] && !el.getAttribute('data-legal-modal')) {
-          el.setAttribute('data-legal-modal', 'true');
+        if (legalRoutes[text] && !el.getAttribute('data-route-ok')) {
+          el.setAttribute('data-route-ok', 'true');
           el.style.cursor = 'pointer';
+          
+          // Force direct window location redirect to folder index
           el.onclick = (e) => {
             e.preventDefault();
             e.stopPropagation();
-            showLegalModal(text, legalData[text]);
+            window.location.href = legalRoutes[text];
           };
         }
       });
-    }, 500);
+    }, 400);
   });
-
-  function showLegalModal(title, htmlContent) {
-    let modal = document.getElementById('legalModalBox');
-    if (!modal) {
-      modal = document.createElement('div');
-      modal.id = 'legalModalBox';
-      modal.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999999; display:flex; align-items:center; justify-content:center; padding:20px; box-sizing:border-box;';
-      document.body.appendChild(modal);
-    }
-    modal.innerHTML = `
-      <div style="background:#151515; border:1px solid #D4AF37; border-radius:12px; max-width:600px; width:100%; padding:25px; color:#e0e0e0; font-family:sans-serif; text-align:left; box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
-        <h2 style="color:#D4AF37; margin-top:0;">${title}</h2>
-        <div style="line-height:1.6; color:#ccc;">${htmlContent}</div>
-        <button onclick="document.getElementById('legalModalBox').style.display='none'" style="margin-top:20px; background:#D4AF37; color:#000; border:none; padding:10px 22px; font-weight:bold; border-radius:6px; cursor:pointer;">Close</button>
-      </div>
-    `;
-    modal.style.display = 'flex';
-  }
-</script> 
+</script>
   
 </body>
 </html>

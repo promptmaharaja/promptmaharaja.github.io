@@ -28,34 +28,40 @@ Error generating stack: `+o.message+`
 </script>
   <script>(function(){function m(a){var h=a.getAttribute("href");if(!h)return;try{var u=new URL(h,document.baseURI);if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener noreferrer";}}catch(e){}}function s(){document.querySelectorAll("a[href]").forEach(m);}if(document.readyState!=="loading"){s();}else{document.addEventListener("DOMContentLoaded",s);}document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(a){m(a);}},true);})();</script>
 
-<!-- Final Navigation Fix for Legal Folder URLs -->
+<!-- Final React-Router Capture Overrider -->
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const legalRoutes = {
-      'Privacy Policy': '/privacy/',
-      'Terms & Conditions': '/terms/',
-      'License': '/license/',
-      'Refund Policy': '/refund/'
-    };
-
-    setInterval(() => {
-      document.querySelectorAll('div, p, span, li, a').forEach(el => {
-        const text = el.innerText ? el.innerText.trim() : '';
-        if (legalRoutes[text] && !el.getAttribute('data-route-ok')) {
-          el.setAttribute('data-route-ok', 'true');
-          el.style.cursor = 'pointer';
-          
-          // Force direct window location redirect to folder index
-          el.onclick = (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            window.location.href = legalRoutes[text];
-          };
-        }
-      });
-    }, 400);
-  });
-</script>
+  window.addEventListener('click', function(e) {
+    let target = e.target;
+    while (target && target !== document.body) {
+      const text = target.innerText ? target.innerText.trim() : '';
+      if (text === 'Privacy Policy') {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        window.location.assign('/privacy/');
+        return;
+      }
+      if (text === 'Terms & Conditions') {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        window.location.assign('/terms/');
+        return;
+      }
+      if (text === 'License') {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        window.location.assign('/license/');
+        return;
+      }
+      if (text === 'Refund Policy') {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        window.location.assign('/refund/');
+        return;
+      }
+      target = target.parentElement;
+    }
+  }, true);
+      </script>
   
 </body>
 </html>

@@ -28,12 +28,22 @@ Error generating stack: `+o.message+`
 </script>
   <script>(function(){function m(a){var h=a.getAttribute("href");if(!h)return;try{var u=new URL(h,document.baseURI);if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener noreferrer";}}catch(e){}}function s(){document.querySelectorAll("a[href]").forEach(m);}if(document.readyState!=="loading"){s();}else{document.addEventListener("DOMContentLoaded",s);}document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(a){m(a);}},true);})();</script>
 
-<!-- Final React-Router Capture Overrider -->
+<!-- Final Navigation & Event Capture Overrider -->
 <script>
   window.addEventListener('click', function(e) {
     let target = e.target;
     while (target && target !== document.body) {
       const text = target.innerText ? target.innerText.trim() : '';
+
+      // ARTS Studios Tool / Notify Me Direct File Link Fix
+      if (text === 'Notify Me' || text.includes('ARTS Studios Tool')) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        window.location.assign('/arts-studios.html');
+        return;
+      }
+
+      // Legal Routes
       if (text === 'Privacy Policy') {
         e.stopImmediatePropagation();
         e.preventDefault();
@@ -61,7 +71,7 @@ Error generating stack: `+o.message+`
       target = target.parentElement;
     }
   }, true);
-      </script>
+        </script>
   
 </body>
 </html>

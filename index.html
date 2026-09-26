@@ -28,50 +28,59 @@ Error generating stack: `+o.message+`
 </script>
   <script>(function(){function m(a){var h=a.getAttribute("href");if(!h)return;try{var u=new URL(h,document.baseURI);if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener noreferrer";}}catch(e){}}function s(){document.querySelectorAll("a[href]").forEach(m);}if(document.readyState!=="loading"){s();}else{document.addEventListener("DOMContentLoaded",s);}document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(a){m(a);}},true);})();</script>
 
-<!-- Final Navigation & Event Capture Overrider -->
+<!-- Fixed Navigation - Categories vs Arts Studios separated -->
 <script>
   window.addEventListener('click', function(e) {
     let target = e.target;
     while (target && target !== document.body) {
       const text = target.innerText ? target.innerText.trim() : '';
 
-      // ARTS Studios Tool / Notify Me Direct File Link Fix
-      if (text === 'Notify Me' || text.includes('ARTS Studios Tool')) {
-        e.stopImmediatePropagation();
-        e.preventDefault();
-        window.location.assign('/arts-studios.html');
-        return;
+      // ONLY ARTS Studios Tool box should go to arts-studios.html - NOT categories
+      if (text === 'Notify Me' || (text.includes('ARTS Studios Tool') && !text.includes('AI Girls') && !text.includes('Cinematic'))) {
+        // Ensure it's actually the ARTS box, not category card
+        if (target.closest && target.closest('[class*="bg-[#0E0E0E]"]') && text.includes('ARTS Studios Tool')) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+          window.location.href='arts-studios.html';
+          return;
+        }
+        if (text === 'Notify Me') {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+          window.location.href='arts-studios.html';
+          return;
+        }
       }
 
-      // Legal Routes
+      // Legal routes -> direct html files (not /privacy/ folder)
       if (text === 'Privacy Policy') {
         e.stopImmediatePropagation();
         e.preventDefault();
-        window.location.assign('/privacy/');
+        window.location.href='privacy.html';
         return;
       }
       if (text === 'Terms & Conditions') {
         e.stopImmediatePropagation();
         e.preventDefault();
-        window.location.assign('/terms/');
+        window.location.href='terms.html';
         return;
       }
       if (text === 'License') {
         e.stopImmediatePropagation();
         e.preventDefault();
-        window.location.assign('/license/');
+        window.location.href='licence.html';
         return;
       }
       if (text === 'Refund Policy') {
         e.stopImmediatePropagation();
         e.preventDefault();
-        window.location.assign('/refund/');
+        window.location.href='refund.html';
         return;
       }
       target = target.parentElement;
     }
   }, true);
-        </script>
+</script>
   
 </body>
 </html>

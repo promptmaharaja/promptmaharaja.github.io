@@ -40,19 +40,19 @@ R("premium"),A("No results found")},C=(c)=>{p(c),A("Prompt copied to clipboard")
     while (target && target !== document.body) {
       const text = target.innerText ? target.innerText.trim() : '';
 
-      // ONLY ARTS Studios Tool box should go to arts-studios.html - NOT categories
+      // ONLY ARTS Studios Tool box should go to /arts-studios/ - NOT categories
       if (text === 'Notify Me' || (text.includes('ARTS Studios Tool') && !text.includes('AI Portraits') && !text.includes('Cinematic'))) {
         // Ensure it's actually the ARTS box, not category card
         if (target.closest && target.closest('[class*="bg-[#0E0E0E]"]') && text.includes('ARTS Studios Tool')) {
           e.stopImmediatePropagation();
           e.preventDefault();
-          window.location.href='arts-studios.html';
+          window.location.href='/arts-studios/';
           return;
         }
         if (text === 'Notify Me') {
           e.stopImmediatePropagation();
           e.preventDefault();
-          window.location.href='arts-studios.html';
+          window.location.href='/arts-studios/';
           return;
         }
       }

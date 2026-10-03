@@ -14,13 +14,13 @@
 
 <h1>✉️ Contact Us</h1>
 <p class="updated">We usually respond within 24–48 hours.</p>
-<p>We would love to hear from you — feedback on a prompt pack, a style request, or support with your order.</p>
+<p>We would love to hear from you — feedback on a prompt pack, a style request, or a new trend you want us to cover.</p>
 <ul>
 <li><strong>Email:</strong> support@promptmaharaja.in</li>
 <li><strong>Website:</strong> https://promptmaharaja.in</li>
 <li><strong>Business hours:</strong> Monday to Friday, 10:00 AM – 6:00 PM (IST)</li>
 </ul>
-<form action="mailto:support@promptmaharaja.in" method="post" enctype="text/plain">
+<form onsubmit="return sendEmail()">
 <label for="name">Your Name</label>
 <input type="text" id="name" name="name" required>
 <label for="email">Your Email</label>
@@ -37,5 +37,16 @@
 <div class="legal-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="license.html">License</a><a href="refund.html">Refund Policy</a></div>
 <div class="legal-copy">&copy; 2026 Arts Studios (promptmaharaja.in). All rights reserved.</div>
 </div>
+<script>
+function sendEmail(){
+var n=document.getElementById('name').value;
+var e=document.getElementById('email').value;
+var s=document.getElementById('subject').value;
+var m=document.getElementById('message').value;
+if(!n||!e||!s||!m){alert('Please fill all fields');return false;}
+var body='Name: '+n+'\nEmail: '+e+'\n\n'+m;
+window.location.href='mailto:support@promptmaharaja.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(body);
+return false;}
+</script>
 </body>
 </html>

@@ -251,26 +251,26 @@ R("premium"),A("No results found")},C=(c)=>{p(c),A("Prompt copied to clipboard")
   window.addEventListener('load',inject);
 })();
 </script>
+<style>
+/* Card pe poora prompt dikhao */
+div p {
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
+  -webkit-box-orient: unset !important;
+  display: block !important;
+  overflow: visible !important;
+  max-height: none !important;
+  white-space: normal !important;
+  text-overflow: clip !important;
+}
+</style>
 <script>
-/* Homepage Copy fix */
+/* Homepage Copy fix v2 - poora prompt React se */
 document.addEventListener('click', function(e) {
   var btn = e.target.closest('button');
   if (!btn) return;
   if ((btn.innerText || '').toLowerCase().indexOf('copy') === -1) return;
-  var text = btn.getAttribute('data-prompt') || '';
-  var el = btn.parentElement, depth = 0;
-  while (el && depth < 6 && !text) {
-    if (el.getAttribute) text = el.getAttribute('data-prompt') || '';
-    if (!text) {
-      var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n, best = '';
-      while (n = w.nextNode()) {
-        var t = n.nodeValue.trim();
-        if (t.length > best.length && t.length > 20) best = t;
-      }
-      text = best;
-    }
-    el = el.parentElement; depth++;
-  }
+  var text = findFullPrompt(btn) || findVisibleText(btn);
   if (!text) return;
   function fb() {
     var ta = document.createElement('textarea');
@@ -283,6 +283,42 @@ document.addEventListener('click', function(e) {
     navigator.clipboard.writeText(text).catch(fb);
   } else { fb(); }
 }, true);
-  </script>
+function findFullPrompt(btn) {
+  var node = btn, depth = 0, best = '';
+  while (node && depth < 8) {
+    for (var key in node) {
+      if (key.indexOf('__reactFiber$') === 0 || key.indexOf('__reactProps$') === 0) {
+        scanFiber(node[key], 0);
+      }
+    }
+    node = node.parentElement; depth++;
+  }
+  function scanFiber(f, d) {
+    if (!f || d > 15) return;
+    var p = f.memoizedProps || f.pendingProps || {};
+    for (var k in p) {
+      var v = p[k];
+      if (typeof v === 'string' && v.length > 100 && v.length > best.length) {
+        if (v.slice(-1) !== '…' && v.slice(-3) !== '...') best = v;
+      }
+    }
+    scanFiber(f.return, d + 1);
+    scanFiber(f.child, d + 1);
+  }
+  return best;
+}
+function findVisibleText(btn) {
+  var el = btn.parentElement, depth = 0, best = '';
+  while (el && depth < 6) {
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n;
+    while (n = w.nextNode()) {
+      var t = n.nodeValue.trim();
+      if (t.length > best.length && t.length > 20) best = t;
+    }
+    el = el.parentElement; depth++;
+  }
+  return best;
+}
+    </script>
 </body>
 </html>

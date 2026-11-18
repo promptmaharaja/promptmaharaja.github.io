@@ -303,10 +303,13 @@ var img = new Image();
 img.onload = function() {
 try {
 var c = document.createElement("canvas");
-c.width = img.naturalWidth || img.width;
-c.height = img.naturalHeight || img.height;
+var iw = img.naturalWidth || img.width;
+var ih = img.naturalHeight || img.height;
+var cropBottom = lastClean ? 0 : Math.round(ih * 0.045);
+c.width = iw;
+c.height = ih - cropBottom;
 var x = c.getContext("2d");
-x.drawImage(img, 0, 0, c.width, c.height);
+x.drawImage(img, 0, 0, iw, c.height, 0, 0, c.width, c.height);
 burnWatermark(x, c.width, c.height, noLogo);
 var a = document.createElement("a");
 a.href = c.toDataURL("image/jpeg", 0.92);
